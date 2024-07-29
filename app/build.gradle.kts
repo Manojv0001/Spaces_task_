@@ -19,7 +19,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        buildConfigField("String", "BASE_URL", "\"https://universities.hipolabs.com/\"")
+        buildConfigField("String", "BASE_URL", "\"http://universities.hipolabs.com/\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -95,6 +95,11 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
     implementation (libs.logging.interceptor)
+
+    // Room
+    implementation (libs.androidx.room.runtime)
+    kapt (libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
 
     //Testing
     testImplementation (libs.junit)

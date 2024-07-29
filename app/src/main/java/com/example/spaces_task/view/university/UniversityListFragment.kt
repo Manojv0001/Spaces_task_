@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.spaces_task.data.model.UniversityResponseItem
 import com.example.spaces_task.databinding.FragmentUniversityListBinding
 import com.example.spaces_task.view.base.BaseFragment
@@ -48,8 +49,8 @@ class UniversityListFragment : BaseFragment<FragmentUniversityListBinding>() {
                     UniversityListFragmentDirections.actionUniversityListFragmentToUniversityDetailsFragment(
                         extraUniversityDetails = universityResponseItem
                     )
+                findNavController().navigate(action)
             }
-
         }
         binding.rvUniversityList.adapter = universityAdapter
     }

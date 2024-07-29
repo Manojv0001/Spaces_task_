@@ -12,7 +12,7 @@ class UniversityViewHolder(private val binding: ItemUniversityBinding) :
         binding.tvUniversityName.text = universityResponseItem.name ?: ""
         binding.tvUniversityState.text = universityResponseItem.stateProvince ?: ""
 
-        binding.root.setOnClickListener {
+        binding.clMain.setOnClickListener {
             itemClickListener?.onItemClick(universityResponseItem)
         }
     }

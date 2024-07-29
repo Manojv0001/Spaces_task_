@@ -22,12 +22,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:gravity="left"
+            android:gravity="start"
             android:hint="University Name"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="28sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,25 +37,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:layout_marginBottom="10dp"
             android:gravity="start"
             android:hint="University State"
             android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_university_name" />
 
-        <ImageView
-            android:id="@+id/img_arrow"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="12dp"
-            android:background="@color/material_on_primary_disabled"
-            android:src="@drawable/right_arrow"
-            app:layout_constraintStart_toEndOf="@+id/tv_university_name"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="end"
+        android:background="@color/material_on_primary_disabled"
+        android:src="@drawable/right_arrow" />
 
 </androidx.cardview.widget.CardView>
